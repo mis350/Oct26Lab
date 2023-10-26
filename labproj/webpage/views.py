@@ -1,7 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+
+    context = {
+        "name": request.GET.get("name", ""),
+        "major": "Mis",
+        "gpa": 4.0,
+        "students": ["rawan", "abrar", "fatemah", "noor"],
+
+    }
+
+    return render (request, 'rawan.html', context)
