@@ -1,0 +1,32 @@
+<html>
+    <body>
+      <h1>Hello</h1> <h3> {{name}}</h3>
+      {% if name == 'rawan'%}
+      <p>
+      you are registered in this class
+       </p>
+      {% else %}
+      <p>
+      leave
+       </p>
+       {% endif %}
+      <p>your major is {{major}} </p>
+      <p>your gpa is {{gpa}} </p>
+      <p>Students in this class {{students}} </p>
+      <p>Students in your class are:</p>
+      <ul>
+          {% for s in students %}
+          <li>{{ s|capfirst }}</li>
+          {% endfor %}
+      </ul>
+      <a href=https://portal.ku.edu.kw/>This a link</a>    
+      
+      <form action="" method="GET">
+        <label for="name">your name? </label>
+        <input type="text" name="name">
+        <input type=submit>
+
+      </form>
+
+    </body>
+  </html>
