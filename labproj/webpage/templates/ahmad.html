@@ -1,0 +1,16 @@
+<html>
+
+<h1> My name is Ahmad </h1>
+
+    
+       <dt> Taken Classes: </dt>
+         <ol>
+             {% for item in Classes %}
+             <li> {{item}}</li>
+             {% endfor %}
+             
+         </ol>
+
+         <img src="data:image/png;base64,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" alt="Palastine">
+
+</html>
