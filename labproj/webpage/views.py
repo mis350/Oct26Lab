@@ -3,5 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+    c = {
+        "age" : "24"
+
+
+    }
+    return render (request, 'Naser.html', c )
