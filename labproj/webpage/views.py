@@ -1,7 +1,17 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
+
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+    context = {
+        "name": "Bader",
+        "Classe": "MIS350",
+        "Professors_List": ["Dr. Ali", "Dr. Mariam", "Dr. Mohammad"],
+        "Courses_Grades": [
+            {"Course": " MIS 240", "Grade": "B+"},
+            {"Course": " MIS 120", "Grade": "B-"},
+            {"Course": " Accounting 1", "Grade": "F"}
+        ]
+    }
+    
+    return render(request, 'Bader.html', context)
