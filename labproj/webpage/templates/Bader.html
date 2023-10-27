@@ -1,5 +1,28 @@
 <html>
+    <body>
+        <h1> This sentence is typed in HTML page (Bader.html)   </h1>
+        <h1>Welcome {{ name }}</h1>
+        <p>Your class is {{ Classe }} </p>
+        <ul>
+            {% for professor in Professors_List %}
+            <li>{{ professor }}</li>
+            {% endfor %}
+        </ul>
 
-    <h1> Show me this paeg !  </h1>
+
+        <h2>Courses & Grades</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+        {% for course in Courses_Grades %}
+        <tr>
+            <td>{{course.Course}}</td>
+            <td>{{course.Grade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
 
 </html>
