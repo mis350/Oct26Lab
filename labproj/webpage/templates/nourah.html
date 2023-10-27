@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h1> Hello </h1> <h3>{{ name }}</h3>
+        <p> Welcome to the CBA collage </p>
+
+        <p> you hvave many major in CBA collage </p>
+        <p> you will laern alot in the collage </p>
+        <p> the majors you have : </p>
+    <ul> 
+        {% for m in majors %}
+        <li> {{m}}</li>
+        {% endfor %}
+    </ul>
+    
+
+    </body>
+</html>
