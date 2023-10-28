@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>Welcome {{ Name }}</h1>
+        <p>Your Major is {{Major}} </p>
+
+        <h2>Courses & Grades</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+        {% for course in Courses_Grades %}
+        <tr>
+            <td>{{course.Course|capfirst}}</td>
+            <td>{{course.Grade|upper}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <from action=""method="GET">
+      <label for="course">What is your Grade?</label>
+      <input type="text"Grade="Grade">
+
+      <input type="submit">
+    </from>
+    </body>
+
+</html>
