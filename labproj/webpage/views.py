@@ -1,7 +1,17 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 
+from django.shortcuts import render
+ 
 # Create your views here.
+ 
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+    context = {
+        "Name": "sara",
+        "countries_List": ["Kuwait","Qatar","Oman"],
+        "countreis_capital": [
+            {"countre": "Kuwait",          "capital":"Kuwait Cit"},
+            {"Course": "Qatar",      "capital":"Doha"},
+            {"Course": "Oman",   "capital":"Muscat"},
+        ]
+    }
+   
+    return render(request, 'sara.html', context)

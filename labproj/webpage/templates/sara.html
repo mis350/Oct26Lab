@@ -1,0 +1,27 @@
+
+
+
+<html>
+  <body>
+    <h1>Welcome {{ Name }}</h1>
+  <h1> show me some countreis and thier capital</h1>
+  <h2>countreis & capital</h2>
+  <table>
+      <tr>
+          <th>countreis</th>
+          <th>capital</th>
+      </tr>
+      {% for x in countries_List %}
+      <tr>
+          <td>{{countreis.countreis}}</td>
+          <td>{{countreis.capital}}</td>
+      </tr>
+      {% endfor %}
+  </table>
+
+  </body>
+</html>
+ 
+ 
+ 
+ 
