@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+    context = { 
+    
+    "books": ["Deth on the Nile", "Murder on the orient Express", "And then there were none"]
+
+    }
+    return render (request, 'abrar.html', context)
