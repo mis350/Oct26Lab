@@ -1,7 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def webpage_view(request):
-    x = HttpResponse('Hello World')
-    return x
+
+    
+        data = {} 
+        data["name"] = "Mohammed"
+        data["team1"] = "Ali"
+        data["team2"] = "Saad"
+
+
+
+    
+        return render (request, 'mohammed.html', context=data)
