@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <h1>Hello</h1>
+    <form action="" method="GET">
+        <label for="name">What is your name?</label>
+        <input type="text" name="name">
+        <label for="major">What is your major?</label>
+        <input type="text" name="major">
+        <input type="submit">
+    </form>
+
+    <p> Your name is : {{name}} </p>
+    <p> Your major is : {{ major }}</p>
+
+    {% if name == "Duha" %}
+    <p>
+    Hello in CBA
+    </p> 
+    {% else %}
+    <p>
+    Welcome to Kuwait University
+    </p>
+    {% endif %}
+
+    <p>Since you're a <strong>CBA</strong> student</p>
+    <p>You must take some of these courses listed below.</p>
+
+    <p> The courses are:</p>
+    <ul>
+        {% for c in courses  %}
+        <li> {{c| capfirst}} </li>
+        {% endfor %}
+    </ul>
+    <a href="https://cbaweb.ku.edu.kw/"> This is a link of CBA </a>
+
+   
+    
+  
+  </body>
+</html>
