@@ -3,8 +3,9 @@ from django.shortcuts import render
 
 # Create your views here.
 def webpage_view(request):
-    data = {}
-    data["name"] = "Ahmad"
-    data["guest"] = "Abdullah"
-    #x = HttpResponse('Hello World')
-    return render(request, "farid.html", context=data)
+    data = {"name": request.GET.get("name"," "),
+            "major":request.GET.get("major"," "),
+            "courses":["Micro","acc1","qmis","finance","management"]
+    }
+    
+    return render(request, "duha.html", context=data)
